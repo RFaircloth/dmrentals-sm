@@ -83,28 +83,14 @@
 
 					<div style="clear:both;"></div>
 
-				</div> <!--- [ #header ] --->					
+				</div> <!--- [ #header ] --->
 
 
 
 
-
-				<style>
-
-						.menu_container_100 	{ 	border:1px solid rgba(255,255,255,.7); border-radius:1em; background-color:rgba(0,0,0,.6);
-											 			margin-bottom:1em; margin-top:1.5em; padding:1em 2em; text-align:center;}
-
-						.menu_button 			{  padding:4px 18px 4px 18px;	border:1px solid rgba(255,255,206,.5); border-radius:.5em;
-														color:rgba(255,255,206,1); background-color:rgba(0,0,0,.8); }
-
-				</style>
-
-				<div id="menu" class="menu_container_100">
-
-					<span class="menu_button">Menu</span>
-
-				</div> <!--- [ #menu ] --->
-
+				<cfinclude template = "modules/menu/menu.cfm">
+				<script src = "modules/menu/menu.js"></script>
+				<link type="text/css" rel="stylesheet" href="modules/menu/menu.css" >			
 
 
 

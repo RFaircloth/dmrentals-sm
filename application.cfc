@@ -32,7 +32,7 @@
 			<cfset application.pageBackgroundImage 								=	"nebulosity01_bw_01.jpg"															/>
 			<cfset application.site_logo 												= 	"dmrentals-logo.png"																	/>
 			<cfset application.rootDir 												=	"/dmrentals-sm/"																		/>
-			<cfset application.imagesDir 												=	"site_wide_assets/images"															/>
+			<cfset application.imagesDir 												=	"/site_wide_assets/images"															/>
 			<cfset application.userImagesReadDir									=	"http://local.dm-rentals.com/user-images"										/>
 			<cfset application.userImagesWriteDir 									=	"e:\inetpub\webroot\dmrentals\user-images" 									/>
 			<cfset application.cssDir													=	"/dmrentals-sm/css"																	/>
