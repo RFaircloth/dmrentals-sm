@@ -1,0 +1,9 @@
+
+	#screen_width, #current_screen_width {
+
+					color: 												#fff;
+					position: 											absolute;
+					top: 													10px;
+					left: 												10px;
+					z-index: 											3;
+}

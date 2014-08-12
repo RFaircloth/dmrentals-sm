@@ -1,7 +1,7 @@
 
 <cfcomponent hint="handles application settings and variables" output="false">
 
-		<cfset this.name							=	"dmrentals"									/>
+		<cfset this.name							=	"dmrentals-sm"								/>
 		<cfset this.sessionManagement 		= 	true											/>
 		<cfset this.sessionTimeout 			= 	"#createTimeSpan(0,1,0,0)#"			/>
 		<cfset this.applicationTimeout 		= 	"#createTimeSpan(1,0,0,0)#"			/>
@@ -15,7 +15,7 @@
 
 		<!--- <cfset structDelete(session, 'site_manager_id') /> --->
 
-		<cfif  cgi.server_name	is	'local.dm-rentals.com'	>
+		<cfif  cgi.server_name	is	'local-sm.dm-rentals.com'	>
 
 			<cfset application.site_dsn												=	"dmrentals-development"																/>
 			<cfset application.site_name 												= 	"David McDonald Rental Properties"												/>
@@ -31,14 +31,14 @@
 			<cfset application.site_zip_code											=	"31313"																					/>
 			<cfset application.pageBackgroundImage 								=	"nebulosity01_bw_01.jpg"															/>
 			<cfset application.site_logo 												= 	"dmrentals-logo.png"																	/>
-			<cfset application.rootDir 												=	"/dmrentals/"																			/>
+			<cfset application.rootDir 												=	"/dmrentals-sm/"																		/>
 			<cfset application.imagesDir 												=	"site_wide_assets/images"															/>
 			<cfset application.userImagesReadDir									=	"http://local.dm-rentals.com/user-images"										/>
 			<cfset application.userImagesWriteDir 									=	"e:\inetpub\webroot\dmrentals\user-images" 									/>
-			<cfset application.cssDir													=	"/dmrentals/css"																		/>
-			<cfset application.jsDir													=	"/dmrentals/js"																		/>
-			<cfset application.modulesDir												=	"/dmrentals/modules"																	/>
-			<cfset application.includesPath 											=	"/dmrentals/includes"																/>
+			<cfset application.cssDir													=	"/dmrentals-sm/css"																	/>
+			<cfset application.jsDir													=	"/dmrentals-sm/js"																	/>
+			<cfset application.modulesDir												=	"/dmrentals-sm/modules"																/>
+			<cfset application.includesPath 											=	"/dmrentals-sm/includes"															/>
 			<cfset application.modulesCFCPath										=	"modules"																				/>
 
 		<cfelseif cgi.server_name is 'development.dm-rentals.com'		>
