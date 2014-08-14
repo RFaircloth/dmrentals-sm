@@ -6,6 +6,9 @@
 		},
 		{
 			"path": "/E/inetpub/webroot/dmrentals"
+		},
+		{
+			"path": "/E/inetpub/webroot/holtzman_rentals_site_manager"
 		}
 	]
 }
