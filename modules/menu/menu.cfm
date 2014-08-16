@@ -15,7 +15,7 @@
 							<ul class="menu_container">
 
 								<li><a href="/index.cfm">Home</a></li>
-								<li><a href="/modules/rental_properties/rental_properties.cfm">Rental Properties</a></li>
+								<li><a href="/modules/rental-properties/rental-properties.cfm">Rental Properties</a></li>
 								<li>Blog</li>
 
 							</ul>

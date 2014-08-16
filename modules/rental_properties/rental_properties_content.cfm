@@ -39,11 +39,16 @@
 
 			</style>
 
+			<script src="ajaxupload.js"></script>
+
+			<p id="uploaded_image_name"></p>
+			<p>&nbsp;</p>
+
 
 			<form id="add_new_rental_property_photo_form" method="post">
 
 				<label>Select an image</label>
-				<input id="imageUpload" class=" " type="file" size="20" >
+				<input id="image_upload" class=" " type="file" size="20" >
 				<input id="upload_image_button" type="button" value="upload image">
 				<img id="processing_image" src="/site_wide_assets/images/loading.gif" /> <span id="processing_text">Processing...</span>
 				
@@ -52,84 +57,121 @@
 
 			<script>
 
-					$(document).ready(function(){
+					// $(document).ready(function(){
 
-							$('#upload_image_button').click(function() {
+					// 		$('#upload_image_button').click(function() {
 
-									var thumb = $('img#thumb');
+					// 				var thumb = $('img#thumb');
 
-									$('#processing_image, #processing_text').fadeIn();
+					// 				$('#processing_image, #processing_text').fadeIn();
 
-									fnProcessAddRentalPropertyPhotoForm();
+					// 				fnProcessAddRentalPropertyPhotoForm();
 
-							});
+					// 		});
 
-					});
+					// });
 
 					
-					function fnProcessAddRentalPropertyPhotoForm() {
+					// function fnProcessAddRentalPropertyPhotoForm() {
 
-							// alert('inside fnProcessAddRentalPropertyPhotoForm');
+					// 		alert('inside fnProcessAddRentalPropertyPhotoForm');
 
-							var addNewRentalPropertyPhotoForm = $('#add_new_rental_property_photo_form');
+					// 		var addNewRentalPropertyPhotoForm = $('#add_new_rental_property_photo_form');
 
-							addNewRentalPropertyPhotoForm.submit(function(objEvent) {
+					// 		addNewRentalPropertyPhotoForm.submit(function(objEvent) {
 
-									var jThis = $(this);
+					// 				var jThis = $(this);
 
-									var strName = ('uploader' + (new Date()).getTime());
+					// 				alert('2');
 
-									var jFrame  = $( '<iframe name=\'' + strName + '\' src=\'about:blank\' />' );
+					// 				var strName = ('uploader' + (new Date()).getTime());
 
-									jFrame.css('display', 'none');
+					// 				alert('3');
 
-									jFrame.load(function(objEvent) {
+					// 				var jFrame  = $( '<iframe name=\'' + strName + '\' src=\'about:blank\' />' );
 
-											var objUploadBody = window.frames[ strName ].document.getElementsByTagName( 'body' )[ 0 ];
-											var jBody = $(objUploadBody);
+					// 				// jFrame.css('display', 'none');
 
-									});
+					// 				jFrame.load(function(objEvent) {
 
-									$('body:first').append(jFrame);
+					// 						var objUploadBody = window.frames[ strName ].document.getElementsByTagName( 'body' )[ 0 ];
+					// 						var jBody = $(objUploadBody);
 
-									jThis 	.attr( 'action', 'rental-properties.cfc?method=mAddRentalPropertyPhoto&returnFormat=json' )
-												.attr( 'method', 'post')
-												.attr( 'enctype', 'multipart/form-data')
-												.attr( 'encoding', 'multipart/form-data')
-												.attr( 'target'. strName )
+					// 				});
 
-							});
-					}
+					// 				// alert('about to append iframe');
 
+					// 				$('body:first').append(jFrame);
 
+					// 				jThis 	.attr( 'action', 'rental-properties.cfc?method=mAddRentalPropertyPhoto&returnFormat=json' )
+					// 							.attr( 'method', 'post')
+					// 							.attr( 'enctype', 'multipart/form-data')
+					// 							.attr( 'encoding', 'multipart/form-data')
+					// 							.attr( 'target'. strName )
 
-					// 		new AjaxUpload('imageUpload', {
+					// 				ajaxResponse = response;
 
-					// 				action: 		$('form#newHotnessForm').attr('action'),
-					// 				name: 		'image',
-
-					// 				onSubmit: 	function(file, extension) {
-
-					// 										$('div.preview').addClass('loading');
-					// 								},
-
-					// 				onComplete: function(file, response) {
-
-					// 										thumb.load(function(){
-
-					// 												$('div.preview').removeClass('loading');
-					// 												thumb.unbind();
-					// 										});
-
-					// 										thumb.attr('src', response);
-					// 								}
 					// 		});
-					// 	});
-					// }); 		
+
+					// 		alert('4');							
+
+					// 		fnShowUploadedFileName(ajaxResponse);
+
+					// }
+
+
+
+
+					// function fnShowUploadedFileName(ajaxResponse) {
+
+					// 		$('#uploaded_image_name#').append('New uploaded file is ' + ajaxResponse.PROPERTYPHOTOFILENAME + '.');
+
+					// }
+
 
 			</script>
 
-	</div>
+	</div>					
+
+
+
+
+			<script>
+
+					$(document).ready(function(){
+
+					 		$('#upload_image_button').click(function() {
+
+					 				var thumb = $('img#thumb');
+
+					 				$('#processing_image, #processing_text').fadeIn();
+
+					 		new AjaxUpload('imageUpload', {
+
+					 				action: 		$('form#newHotnessForm').attr('action'),
+					 				name: 		'image',
+
+					 				onSubmit: 	function(file, extension) {
+
+					 										$('div.preview').addClass('loading');
+					 								},
+
+					 				onComplete: function(file, response) {
+
+					 										thumb.load(function(){
+
+					 												$('div.preview').removeClass('loading');
+					 												thumb.unbind();
+					 										});
+
+					 										thumb.attr('src', response);
+					 								}
+					 		});
+					 	});
+					 }); 		
+
+			</script>
+
 
 
 

@@ -27,7 +27,7 @@
 				<script src = "/modules/menu/menu.js"></script>
 				<link type="text/css" rel="stylesheet" href="/modules/menu/menu.css" >
 
-	<script src="ajaxupload.js"></script>
+
 
 				<cfinclude template = "/modules/rental_properties/rental_properties_content.cfm" />
 
