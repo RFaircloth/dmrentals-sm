@@ -3,7 +3,7 @@
 
 <head>
 
-        <cfinclude template = "/modules/head/head.cfm">
+        <cfinclude template = "/modules/head/head.cfm"> 
 
 </head>
 
@@ -15,7 +15,7 @@
 
 
 
-        <div id="page_wrapper">
+        <div id="page_wrapper"> 
 
 
 
@@ -30,6 +30,8 @@
 
 
                 <cfinclude template = "/modules/rental-properties/rental-properties-content.cfm" />
+                <script src = "/modules/rental-properties/rental-properties.js"></script>
+                <link type="text/css" rel="stylesheet" href="/modules/rental-properties/rental-properties.css" >
 
 
 
