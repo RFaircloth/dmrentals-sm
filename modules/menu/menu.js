@@ -16,14 +16,9 @@
 
 			$('#menu_button').click(function() {
 
-					if 		(	$('#menu_links').is(':hidden') 		)
-								{	$('#menu_links').slideDown();
-									return false();							}
-
-					else if  (	$('#menu_links').is(':visible')		)
-								{ 	$('#menu_links').slideUp();
-									return false(); 							}
+					$('#menu_links').slideToggle();
 
 			});
+
 	});
 
