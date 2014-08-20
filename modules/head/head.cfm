@@ -10,4 +10,3 @@
 		<script src="/site_wide_assets/jquery/jquery-2.1.1.min.js"></script>
 		<script src="/site_wide_assets/harvey/harvey.js"></script>
 		<script src="/site_wide_assets/harvey/site_wide_harvey.js"></script>
-		<script src="/modules/menu/menu.js"></script>
