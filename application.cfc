@@ -41,7 +41,7 @@
 			<cfset application.includesPath 											=	"/dmrentals-sm/includes"															/>
 			<cfset application.modulesCFCPath										=	"modules"																				/>
 
-		<cfelseif cgi.server_name is 'development.dm-rentals.com'		>
+		<cfelseif cgi.server_name is 'development-sm.dm-rentals.com'		>
 
 			<cfset application.site_dsn												=	"dmrentals-development"																/>
 			<cfset application.site_name 												=	"David McDonald Rental Properties" 												/>
@@ -60,14 +60,14 @@
 			<cfset application.rootDir 												=	"/dmrentals-development/"															/>
 			<cfset application.imagesDir												=	"site_wide_assets/images"															/>
 			<cfset application.userImagesReadDir									=	"http://development.dm-rentals.com/user-images"								/>
-			<cfset application.userImagesWriteDir									=	"e:\inetpub\webroot\dmrentals-development\user-images"					/>
+			<cfset application.userImagesWriteDir									=	"e:\inetpub\webroot\dmrentals-sm-development\user-images"					/>
 			<cfset application.cssDir													=	"/dmrentals-development/css"														/>
 			<cfset application.jsDir													=	"/dmrentals-development/js"														/>
 			<cfset application.modulesDir												=	"/dmrentals-development/modules/"												/>
 			<cfset application.includesPath											=	"/dmrentals-development/includes/"												/>
 			<cfset application.modulesCFCPath										=	"modules"																				/>
 
-		<cfelseif cgi.server_name is 'client.dm-rentals.com'		>
+		<cfelseif cgi.server_name is 'client-sm.dm-rentals.com'		>
 
 			<cfset application.site_dsn												=	"dmrentals-client"	 																/>
 			<cfset application.site_name 												=	"David McDonald Rental Properties"												/>
@@ -86,7 +86,7 @@
 			<cfset application.rootDir 												=	"/wdmrentals-client/"																/>
 			<cfset application.imagesDir												=	"site_wide_assets/images" 															/>
 			<cfset application.userImagesReadDir									=	"http://client.dm-rentals.com/user-images"									/>
-			<cfset application.userImagesWriteDir									=	"e:\inetpub\webroot\dmrentals-client\user-images"							/>
+			<cfset application.userImagesWriteDir									=	"e:\inetpub\webroot\dmrentals-sm-client\user-images"							/>
 			<cfset application.cssDir													=	"/dmrentals-client/css"																/>
 			<cfset application.jsDir													=	"/dmrentals-client/js"																/>
 			<cfset application.modulesDir												=	"/dmrentals-client/modules/"														/>
@@ -108,7 +108,7 @@
 			<cfset application.site_state												=	"GA"																						/>
 			<cfset application.site_zip_code											=	"31313"																					/>
 			<cfset application.pageBackgroundImage 								=	"nebulosity01_bw_01.jpg"															/>
-			<cfset application.site_logo 												= 	"dmrentals-logo.png"																	/>
+			<cfset application.site_logo 												= 	"dmrentals-logo.png"		 															/>
 			<cfset application.rootDir 												=	"/dmrentals-production/"															/>
 			<cfset application.imagesDir												=	"site_wide_assets/images"															/>
 			<cfset application.userImagesReadDir									=	"http://wwww.dm-rentals.com/user-images"										/>
